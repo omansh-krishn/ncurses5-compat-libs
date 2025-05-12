@@ -38,6 +38,7 @@ build() {
     --with-abi-version=5
   )
 
+  CFLAGS="$CFLAGS -std=gnu17"
   cd "${srcdir}/${_pkgname}-${pkgver}"
 
   ./configure "${configure_options[@]}" --enable-widec
